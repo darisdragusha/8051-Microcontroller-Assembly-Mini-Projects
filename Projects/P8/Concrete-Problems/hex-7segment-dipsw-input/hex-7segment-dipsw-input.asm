@@ -6,7 +6,7 @@ SEGMENT_TABLE:
 
 MAIN:
     MOV P2, #FFH      ; Configure P2 as input (DIP switch)
-    CLR P0            ; Clear 7-segment display
+    MOV P0, #00H            ; Clear 7-segment display
 
 DISPLAY_HEX:
     MOV A, P2         ; Read DIP switch value

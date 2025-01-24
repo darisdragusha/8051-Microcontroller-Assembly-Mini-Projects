@@ -7,7 +7,7 @@ SEGMENT_TABLE:
 MAIN:
     MOV R7, #09H      ; Initialize counter to 9 (BCD)
     MOV P1, #00H      ; Configure P1 as input
-    CLR P0            ; Clear 7-segment display
+    MOV P0, #00H            ; Clear 7-segment display
 
 DOWN_COUNTER:
     MOV DPTR, #SEGMENT_TABLE ; Point to segment table
