@@ -1,0 +1,13 @@
+; (P1 OR R1) AND NOT P2
+	ORG	0000H
+
+MAIN:
+	MOV	A, P1
+	ORL	A, R1
+	MOV	30H, A
+	MOV	A, P2
+	CPL	A
+	ANL	A, 30H
+	MOV	P3, A
+
+	END
